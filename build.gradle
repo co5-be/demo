@@ -30,6 +30,11 @@ dependencies {
     testRuntimeOnly rootProject.junit_engine
 }
 
+test {
+    jvmArgs '-Djdk.internal.httpclient.disableHostnameVerification'
+    useJUnitPlatform()
+}
+
 java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(17))

@@ -20,7 +20,7 @@ enum DemoStages{LOAD_XLSX, RENAME_SHEETS, SET_PAYLOAD};
 
 public class DemoBuilder implements Builder<DemoWorkUnit, DemoStages>{
 
-    Logging _Log = new Logging(null);
+    Logging _Log = new Logging();
     
     public ArrayList<StageDescriptor<DemoWorkUnit, DemoStages>> build(){
         ArrayList<StageDescriptor<DemoWorkUnit, DemoStages>> s = new ArrayList<>();

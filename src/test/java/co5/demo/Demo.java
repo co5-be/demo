@@ -29,12 +29,12 @@ import org.junit.jupiter.api.Test;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
-class Demo {
+public class Demo {
 
     @Test
-    void run() {
+    void deploy() {
         try {
-            String auth = "changeme";
+            String auth = "8188c0c3-2553-425f-be86-168030f00437";
             HttpRequest request;
             HttpResponse<String> response;
             JsonObject responseBody;
@@ -102,7 +102,7 @@ class Demo {
                 .sslContext(ssl)
                 .build();
         HttpRequest request = HttpRequest.newBuilder(URI.create(String.format("%s?id=%s",
-                 String.format("%s/co5/submit", url),
+                 String.format("%s/backflow/payload", url),
                  UUID.randomUUID())))
                 .header("authorization", "valid")
                 .POST(HttpRequest.BodyPublishers.ofByteArray(bais))

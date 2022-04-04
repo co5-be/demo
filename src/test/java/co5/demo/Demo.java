@@ -34,7 +34,7 @@ public class Demo {
     @Test
     void deploy() {
         try {
-            String auth = "8188c0c3-2553-425f-be86-168030f00437";
+            String auth = "changeme";
             HttpRequest request;
             HttpResponse<String> response;
             JsonObject responseBody;
